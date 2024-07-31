@@ -1,1 +1,208 @@
-hiii my name is pratik
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Completed DevOps Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+
+        ol {
+            padding-left: 1.5rem;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            padding: 0.5rem 1rem;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .scroll-top-btn:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Completed DevOps Project</h1>
+            <nav>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#setup">Setup</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="overview">
+            <div class="container">
+                <h2>Project Overview</h2>
+                <p>This project showcases the integration of Jenkins with Ansible to automate and streamline deployment processes.</p>
+            </div>
+        </section>
+
+        <section id="setup">
+            <div class="container">
+                <h2>Setup</h2>
+                <p>The setup involves configuring Jenkins as the CI/CD tool and using Ansible for configuration management. Detailed steps include:</p>
+                <ol>
+                    <li>Installing Jenkins on a web server.</li>
+                    <li>Configuring Jenkins pipelines.</li>
+                    <li>Setting up Ansible for automation tasks.</li>
+                    <li>Integrating Ansible with Jenkins for seamless deployment.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <h2>Features</h2>
+                <ul>
+                    <li>Automated deployment and configuration.</li>
+                    <li>Continuous Integration and Continuous Deployment (CI/CD) pipeline.</li>
+                    <li>Scalable and reliable infrastructure management.</li>
+                    <li>Customizable and extensible automation scripts.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="benefits">
+            <div class="container">
+                <h2>Benefits</h2>
+                <p>Integrating Jenkins with Ansible offers numerous benefits:</p>
+                <ul>
+                    <li>Reduced manual intervention and errors.</li>
+                    <li>Faster deployment cycles.</li>
+                    <li>Improved consistency and reliability.</li>
+                    <li>Efficient management of infrastructure and applications.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>If you have any questions or would like more information about this project, please feel free to reach out:</p>
+                <ul>
+                    <li>Email: <a href="mailto:pratik.pardeshi@example.com">pratik.pardeshi@example.com</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/pratik-pardeshi" target="_blank">Pratik Pardeshi</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Pratik Pardeshi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollTopBtn = document.createElement('button');
+            scrollTopBtn.textContent = 'Scroll to Top';
+            scrollTopBtn.classList.add('scroll-top-btn');
+            document.body.appendChild(scrollTopBtn);
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 200) {
+                    scrollTopBtn.style.display = 'block';
+                } else {
+                    scrollTopBtn.style.display = 'none';
+                }
+            });
+
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
