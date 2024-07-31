@@ -1,2 +1,143 @@
-hii Pratik here 
-successfully deployed web application by ssh jenkins and ansible
+Pratik-Pardeshi/my_registration_app<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 7: Ansible Jenkins Integration</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            color: #e0e0e0;
+            overflow-x: hidden;
+            text-align: center;
+        }
+        .top-header {
+            background-color: #333333;
+            color: #ff0000;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 36px;
+            font-weight: bold;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            border-bottom: 5px solid #ff0000;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.9);
+        }
+        header {
+            background: radial-gradient(circle, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 100%);
+            color: #ff0000;
+            padding: 60px 20px;
+            margin-top: 80px;
+            border-bottom: 5px solid #ff0000;
+            box-shadow: 0 0 60px rgba(255, 0, 0, 0.9);
+            text-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 120px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 60px rgba(255, 0, 0, 0.9);
+            position: relative;
+            overflow: hidden;
+            color: #e0e0e0;
+            text-align: left;
+        }
+        h1, h2 {
+            color: #ff0000;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+            margin: 0;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        footer {
+    background: linear-gradient(180deg, #1a1a1a, #333333);
+    color: #ff0000;
+    text-align: center;
+    padding: 25px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top: 5px solid #ff0000;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.9), 0 0 20px rgba(255, 0, 0, 0.7);
+    text-shadow: 0 0 12px rgba(255, 0, 0, 1), 0 0 20px rgba(255, 0, 0, 0.8);
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+        .glow {
+            text-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 30px rgba(255, 0, 0, 0.8);
+        }
+        .flickering-text {
+            animation: flicker 1.5s infinite;
+        }
+        @keyframes flicker {
+            0% { opacity: 0.9; }
+            50% { opacity: 0.6; }
+            100% { opacity: 0.9; }
+        }
+        .running-lights {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 0, 0, 0.1) 20%, transparent 60%);
+            background-size: 300% 300%;
+            animation: lights 3s linear infinite;
+            pointer-events: none;
+            z-index: -1;
+        }
+        @keyframes lights {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-header">
+        Project 7: Ansible Jenkins Integration
+    </div>
+    
+    <header>
+        <h1 class="glow">Complete DevOps CI/CD Free-Style Project</h1>
+        <h2 class="flickering-text">created By Pratik Pardeshi</h2>
+    </header>
+
+    <div class="running-lights"></div>
+    
+    <div class="container">
+        <h2>Project Overview</h2>
+        <p>Developer write a code and push the code in github. Github is integrate with Jenkins. Jenkins job run compiling & building. after compiling jenkins its created a file and jenkins pushed this file in Ansible. Jenkis triggered a playbook written in Ansible. In this playbook I write a code for deploy a software on Web-server. so, Developer do any changes in code it directly change in web-server.</p>
+        
+        <h2>Project Steps</h2>
+        <ul>
+            <li>Create and configure 4 EC2 instances: Jenkins-Server, Ansible-Server, Web-Server, and Developer.</li>
+            <li>Setup Jenkins, including Java and plugin installations.</li>
+            <li>Install and configure Ansible for managing deployments.</li>
+            <li>Setup SSH key-based authentication between Jenkins, Ansible, and Web servers.</li>
+            <li>Create an Ansible playbook to deploy files to the Web-Server.</li>
+            <li>Integrate GitHub with Jenkins for automated build and deployment.</li>
+            <li>Verify deployment on the Web-Server and test code changes from the Developer system.</li>
+        </ul>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Pratik Pardeshi. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
