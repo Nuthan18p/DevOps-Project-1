@@ -3,226 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Batch Registration</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #282c34, #3b3f46);
-            color: #f1f1f1;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            text-align: center;
-            padding: 50px 0;
-            background: #1f1f1f;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-            color: #61dafb;
-            position: relative;
-            z-index: 2;
-        }
-        header h4 {
-            
-            color: #61dafb;
-            position: relative;
-            z-index: 0;
-        }
-        header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, transparent, #61dafb);
-            animation: rotate 6s linear infinite;
-            z-index: 1;
-        }
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-        .content {
-            padding: 40px;
-            text-align: center;
-        }
-        .content h2 {
-            font-size: 2.5em;
-            color: #61dafb;
-        }
-        .content p {
-            font-size: 1.2em;
-            margin: 20px 0;
-            line-height: 1.6;
-        }
-        .form-container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #353a42;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            margin-bottom: 40px; /* Ensure space for the footer */
-        }
-        .form-container label {
-            display: block;
-            margin: 10px 0 5px;
-            font-size: 1.1em;
-        }
-        .form-container input,
-        .form-container select {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin: 5px 0 15px;
-            border: 1px solid #555;
-            border-radius: 4px;
-            background: #444;
-            color: #fff;
-            font-size: 1em;
-        }
-        .form-container input[type="submit"] {
-            background: #61dafb;
-            border: none;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.2s;
-            margin-bottom: 15px;
-        }
-        .form-container input[type="submit"]:hover {
-            background: #4fc3f7;
-            transform: scale(1.05);
-        }
-        .form-container input[type="submit"]:active {
-            transform: scale(1);
-        }
-        .glowing-button {
-            display: inline-block;
-            margin: 20px;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            text-transform: uppercase;
-            color: #fff;
-            background: #61dafb;
-            border: none;
-            border-radius: 5px;
-            position: relative;
-            overflow: hidden;
-            transition: background 0.3s;
-        }
-        .glowing-button:hover {
-            background: #4fc3f7;
-        }
-        .glowing-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 200%;
-            height: 100%;
-            background: rgba(97, 218, 251, 0.5);
-            transform: skewX(30deg);
-            transition: 0.6s;
-        }
-        .glowing-button:hover::before {
-            left: 100%;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #1f1f1f;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            margin-top: auto;
-        }
-        footer p {
-            margin: 0;
-            color: #61dafb;
-        }
-        .success-message {
-            display: none;
-            margin-top: 20px;
-            font-size: 1.2em;
-            color: #4caf50;
-        }
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5em;
-            }
-            .content h2 {
-                font-size: 2em;
-            }
-        }
-    </style>
-    <script>
-        function validateForm() {
-            const name = document.forms["registrationForm"]["name"].value;
-            const email = document.forms["registrationForm"]["email"].value;
-            const phone = document.forms["registrationForm"]["phone"].value;
-            const batch = document.forms["registrationForm"]["batch"].value;
-            if (name === "" || email === "" || phone === "" || batch === "") {
-                alert("All fields must be filled out");
-                return false;
-            } else {
-                document.getElementById("success-message").style.display = "block";
-                return false; // prevent actual form submission for demonstration
-            }
-        }
-    </script>
+    <title>FItness application </title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
-        <h1>DevOps Batch Registration</h1>
-        <h4>Project-7: Jenkins Ansible Intigration</h4>
-        
+        <h1>Fitness WebApp</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#membership-plans">Membership Plans</a></li>
+                <li><a href="#trainers">Trainers</a></li>
+                <li><a href="#schedule">Class Schedule</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <div class="content">
-        <h2>Register for our DevOps Training Program</h2>
-        <p>Join our comprehensive DevOps training program and enhance your skills in Jenkins, Docker, Kubernetes, and more. Fill out the form below to register for the upcoming batch.</p>
-    </div>
-
-    <div class="form-container">
-        <form name="registrationForm" onsubmit="return validateForm()">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name">
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            
-            <label for="phone">Phone Number:</label>
-            <input type="text" id="phone" name="phone">
-            
-            <label for="batch">Select Batch:</label>
-            <select id="batch" name="batch">
-                <option value="">Select...</option>
-                <option value="Batch 1">Batch 1 - Weekday Mornings</option>
-                <option value="Batch 2">Batch 2 - Weekday Evenings</option>
-                <option value="Batch 3">Batch 3 - Weekend Full Day</option>
-            </select>
-            
-            <input type="submit" value="Register">
-        </form>
-        <p id="success-message" class="success-message">Form submitted successfully!</p>
-    </div>
-
+    <main>
+        <section id="home">
+            <h2>Welcome to Our WebApp</h2>
+            <p>Your fitness journey starts here...!</p>
+        </section>
+        <section id="membership-plans">
+            <h2>Membership Plans</h2>
+            <div id="plans">
+                <!-- Membership plans will be loaded here by JavaScript -->
+            </div>
+        </section>
+        <section id="trainers">
+            <h2>Our Trainers</h2>
+            <div id="trainer-list">
+                <!-- Trainer profiles will be loaded here by JavaScript -->
+            </div>
+        </section>
+        <section id="schedule">
+            <h2>Class Schedule</h2>
+            <div id="class-schedule">
+                <!-- Class schedule will be loaded here by JavaScript -->
+            </div>
+        </section>
+        <section id="login">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2024 Pratik Pardeshi. All Rights Reserved.</p>
+        <p>&copy; 2024 Pratik Pardeshi. All rights reserved.</p>
     </footer>
 
+    <style>
+        /* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+header {
+    background: linear-gradient(to right, #4CAF50, #2E7D32);
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: #388E3C;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #388E3C;
+    transform: scale(1.1);
+}
+
+main {
+    margin-top: 80px; /* Adjusted for fixed header height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    margin: 30px 0;
+    width: 100%;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+    border-bottom: 4px solid #4CAF50;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #4CAF50;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #4CAF50;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#login-form label {
+    margin-top: 10px;
+    color: #555;
+}
+
+#login-form input {
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+#login-form button {
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 16px;
+}
+
+#login-form button:hover {
+    background-color: #388E3C;
+    transform: scale(1.05);
+}
+
+footer {
+    padding: 20px;
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.plan, .trainer, .day-schedule {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.plan:hover, .trainer:hover, .day-schedule:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+    
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    #login-form {
+        width: 90%;
+    }
+}
+
+    </style>
+    <script src="script.js">
+        // JavaScript to handle header scroll effects
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+    </script>
 </body>
 </html>
