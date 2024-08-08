@@ -1,1 +1,1 @@
-https://medium.com/@ahammed.jabirp/devops-project-ci-cd-3-9fedd470e3cc
+https://medium.com/@rutikdevops/complete-devops-cicd-project-18faf4b5f73d
